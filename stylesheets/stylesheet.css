@@ -218,7 +218,18 @@ a {
 @media screen and (max-width: 42em) {
   .main-content {
     padding: 2rem 1rem;
-    font-size: 1rem; } }
+    font-size: 2rem; } }
+
+.main-content {text-align: center;}
+.main-content .title {
+  font-size: 3rem;
+  }
+
+.baidu_item {text-align:center;display: inline-block; width: 130px;height:
+    auto; border: solid 1px #cccccc;
+    border-radius: 10px;}
+.baidu_item:hover {box-shadow: 4px 4px 10px #117A62;}
+.baidu_item:hover {text-decoration: none;}
 
 .site-footer {
   padding-top: 2rem;
