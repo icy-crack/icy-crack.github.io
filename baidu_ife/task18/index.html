@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task-test</title>
+    <style>
+        .inputNo{
+            text-align: left;
+            margin: 1rem 1rem auto 1rem;
+        }
+        .control-icon{
+            text-align: left;
+            margin:1rem auto auto 1rem;
+        }
+        #displayNo p{
+            display: block;
+            background-color: #ccc;
+            width: 2rem;
+            margin:.8rem;
+            text-align: center;
+            line-height: 2rem;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <section class="control-icon">
+        <input class="inputNo" type="text" placeholder="输入需要排列的数"/>
+        <button class="btn-left-in">左侧入</button>
+        <button class="btn-right-in">右侧入</button>
+        <button class="btn-left-out">左侧出</button>
+        <button class="btn-right-out">右侧出</button>
+    </section>
+    <section id="displayNo"></section>
+</div>
+<script>
+
+    var leftIn = document.getElementsByClassName("btn-left-in")[0];
+    var rightIn = document.getElementsByClassName("btn-right-in")[0];
+    var leftOut = document.getElementsByClassName("btn-left-out")[0];
+    var rightOut = document.getElementsByClassName("btn-right-out")[0];
+    var outputList = document.getElementById("displayNo");
+    var outputText = "";
+
+    leftIn.onclick = function() {
+        var getNumber = document.getElementsByClassName("inputNo")[0].value;
+        var newItems = document.createElement("p");
+        var textNode = document.createTextNode(getNumber);
+        newItems.appendChild(textNode);
+        outputList.insertBefore(newItems, outputList.childNodes[0]);
+    }
+    rightIn.onclick = function() {
+        var getNumber = document.getElementsByClassName("inputNo")[0].value;
+        var itemLength = outputList.children.length;
+//        alert(itemLength);
+        var newItems = document.createElement("p");
+        var textNode = document.createTextNode(getNumber);
+        newItems.appendChild(textNode);
+        outputList.insertBefore(newItems, outputList.childNodes[itemLength]);
+    }
+    leftOut.onclick = function() {
+        var itemLength = outputList.children.length;
+        if(itemLength){
+            outputList.removeChild(outputList.childNodes[0]);
+        }else{
+            alert("队列里头没有数哦~");
+        }
+
+    }
+    rightOut.onclick = function() {
+        var itemLength = outputList.children.length;
+        if(itemLength){
+            outputList.removeChild(outputList.childNodes[itemLength-1]);
+        }else{
+            alert("队列里头没有数哦~");
+        }
+    }
+
+</script>
+</body>
+</html>
