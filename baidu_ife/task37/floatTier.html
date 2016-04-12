@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮出层设计</title>
+    <style>
+        html,body,div,button{
+            margin:0;
+            padding:0;
+        }
+        #container{
+            position: absolute;
+            width:100%;
+            height: 1000px;
+            background-color: #FDECD0;
+        }
+        .btn{
+            width: 80px;
+            height: 40px;
+            border: none;
+            text-align: center;
+            color: #fff;
+            float: right;
+            margin-left: 20px;
+            background-color: #528870;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        #test-btn{
+            position: fixed;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            /*z-index: 9999;*/
+            width: 200px;
+            margin: 0;
+            height: 100px;
+            font-size:20px;
+        }
+
+        .float-mask{
+            position: fixed;
+            background-color: rgba(210,210,210,0.6);
+            width: 100%;
+            height: 100%;
+        }
+        .floatConfirm{
+            position: fixed;
+            width: 500px;
+            height: 300px;
+            background-color: rgba(240, 248, 255,0.8);
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            -webkit-animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+            -o-animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+            animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+
+        }
+        @-webkit-keyframes pop-animate {
+            0% {
+                top: 40%;
+                opacity: 0;
+            }
+            100% {
+                top: 50%;
+                opacity: 1;
+            }
+        }
+        @-moz-keyframes pop-animate {
+            0% {
+                top: 40%;
+                opacity: 0;
+            }
+            100% {
+                top: 50%;
+                opacity: 1;
+            }
+        }
+        @-ms-keyframes pop-animate {
+            0% {
+                top: 40%;
+                opacity: 0;
+            }
+            100% {
+                top: 50%;
+                opacity: 1;
+            }
+        }
+        @-o-keyframes pop-animate {
+            0% {
+                top: 40%;
+                opacity: 0;
+            }
+            100% {
+                top: 50%;
+                opacity: 1;
+            }
+        }
+        @keyframes pop-animate {
+            0% {
+                top: 40%;
+                opacity: 0;
+            }
+            100% {
+                top: 50%;
+                opacity: 1;
+            }
+        }
+        .hidden{
+            display: none;
+        }
+        .floatConfirm .float-header{
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: auto;
+            background-color: #BCD0C5;
+            color: #fff;
+            padding:10px;
+        }
+        .floatConfirm .float-text {
+            margin: 20px auto auto 50px;
+        }
+        .floatConfirm .btns{
+            position: absolute;
+            float: right;
+            width: auto;
+            bottom: 50px;
+            right: 50px;
+        }
+    </style>
+
+</head>
+<body>
+<div id="container"></div>
+<button id="test-btn" class="btn">点我点我</button>
+<div class="float-mask hidden"></div>
+<div class="floatConfirm hidden">
+    <div class="float-header">这是一个浮出层</div>
+    <div class="float-text">这是浮出层文本</div>
+    <div class="btns">
+        <button class="btn cancel">取消</button>
+        <button class="btn success">确定</button>
+    </div>
+</div>
+
+<script>
+    var testBtn = document.getElementById("test-btn");
+    var trueBtn = document.getElementsByClassName("success")[0];
+    var falseBtn = document.getElementsByClassName("cancel")[0];
+    var floatMask = document.getElementsByClassName("float-mask")[0];
+    var checkTable = document.getElementsByClassName("floatConfirm")[0];
+    testBtn.addEventListener("click",function(){
+        floatMask.classList.remove("hidden");
+        checkTable.classList.remove("hidden");
+    },false);
+    var closeTable = function(){
+        floatMask.classList.add("hidden");
+        checkTable.classList.add("hidden");
+    };
+    trueBtn.addEventListener("click",closeTable,false);
+    falseBtn.addEventListener("click",closeTable,false);
+    floatMask.addEventListener("click",closeTable,false);
+</script>
+</body>
+</html>
