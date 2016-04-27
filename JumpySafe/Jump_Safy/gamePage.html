@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-height, initial-scale=1,max-scale='1',min-scale='1'">
+    <meta name="screen-orientation" content="landscape"> 
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Jumpy Safy</title>
+</head>
+
+<body >
+	
+	<span class="time">
+		用时:
+	</span>	
+    <section id="show-time">
+        0秒
+    </section>
+    <section id="max-time">
+        0
+    </section>
+    <section class="game-wrap">
+        <div  id='game-main' class="game-main">
+            <div id="item">
+            </div>
+        </div>
+    </section>
+
+    <div class="float-mask hidden" id='mask'></div>
+
+    <div class="floatConfirm success hidden" id='win'>
+        <div class="float-header"></div>
+        <div class="float-text">
+            <div><img src="img/success.png"></div>
+            <div>你赢了~</div>
+        </div>
+        <div class="btns">
+            <button class="btn replay">重玩</button>
+            <button class="btn next">下一关</button>
+            <button class="btn return">首页</button>
+        </div>
+    </div>
+
+    <div class="floatConfirm fail" id="die">
+        <div class="float-text">
+            <div><img src="img/fail.png"></div>
+            <div id='content'>再试一次吧~</div>
+        </div>
+
+        <div class="btns">
+            <button class="btn replay">重玩</button>
+            <button class="btn return">首页</button>
+        </div>
+    </div>
+
+
+
+    <script rel="script" src="js/column.js"></script>
+    <script rel="script" src="js/gamePage.js"></script>    
+
+
+</body>
+
+</html>

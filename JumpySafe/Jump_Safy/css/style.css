@@ -1,0 +1,281 @@
+
+  
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 100px;
+}
+body{
+	font-size: .16rem;
+	font-family: 'Microsoft YaHei', sans-serif, monospace;
+	position: absolute;
+    width: 100%;
+    height:100%
+}
+ul{
+	display: inline-block;
+    list-style: none;
+}
+ul>li{
+    display: inline-block;
+}
+
+button {border: none;}
+
+a{
+    text-decoration: none;
+}
+
+
+
+#container{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(rgb(92, 241, 89),rgb(39, 143, 12));
+}
+h1{
+    
+    font: bold 4em sans-serif;
+    text-shadow: .02rem .02rem .10rem #888;
+    text-align: center;
+    color: white;
+}
+#rank-list{
+    width: 100%;
+    margin: .32rem 0;
+    text-align: center;
+}
+
+#rank-list a{
+    display: inline-block;
+    color:white;
+	font-size: .16rem;
+    font-weight: bold;
+    background: rgb(27, 106, 14);
+    width:6em;
+    margin: 1em;
+    height: 4em;
+    line-height: 4em;
+    border-radius: 2em;
+    box-shadow:0 0 .15rem rgba(111, 233, 134, 0.3);
+    
+}
+#rank-list a:hover{
+    box-shadow:0 0 .35rem rgb(183, 215, 53);
+}
+#rank-list a:active{
+    background-color: rgb(44, 159, 20);
+}
+#start-wrap{
+
+    position: fixed;
+    display: block;
+    width: 90%;
+    height: 50%;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size: .14rem;
+    font-family: "Microsoft YaHei";
+}
+
+
+
+
+.game-wrap{
+    position: relative;
+    width:100%;
+    height: 100%;
+    background: url("../img/bg.jpg");
+	background-size: auto;
+}
+
+
+.lines {
+	display: inline-block;
+    list-style-type: none;
+    
+}
+
+.lines li {
+	display: inline-block;
+    width: .35rem;
+    margin-left: 0;
+	position: relative;
+	bottom: -4px;
+    background: url("../img/tube.png") no-repeat ;
+	background-size:cover;
+
+
+}
+
+#item {
+    position: absolute;
+    margin-left: 0;
+    float: left;
+    bottom: 0;
+    width: .30rem;
+    height: .35rem;
+    background: url("../img/safy.png");
+    background-size: cover;
+}
+
+.game-main{
+    position: absolute;
+	white-space: nowrap;
+	left: 50%;
+    bottom: 0;
+    transform: translate(-50%,0);
+}
+
+
+.btn{
+    width: .8rem;
+    height: .4rem;
+    border: none;
+    text-align: center;
+    color: #fff;
+    float: right;
+    margin-left: .2rem;
+    background-color: #528870;
+    border-radius: .10rem;
+    cursor: pointer;
+	font-size: .16rem;
+
+}
+#test-btn{
+    position: fixed;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 12.5rem;
+    margin: 0;
+    height: 6.25rem;
+    font-size: 1.25rem;
+}
+.float-mask{
+    position: fixed;
+    background-color: rgba(210,210,210,0.6);
+    width: 100%;
+    height: 100%;
+}
+.floatConfirm{
+    position: fixed;
+    width: 4.8rem;
+	padding-top: .2rem;
+    height: 2.8rem;
+    background-color: rgba(240, 248, 255,0.8);
+	white-space: nowrap;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    -webkit-animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    -o-animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+    animation: pop-animate .5s cubic-bezier(0.25, 0.1, 0.25, 1.0);
+}
+@-webkit-keyframes pop-animate {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+@-moz-keyframes pop-animate {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+@-ms-keyframes pop-animate {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+@-o-keyframes pop-animate {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+@keyframes pop-animate {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+.hidden{
+    display: none;
+}
+.floatConfirm .float-text div{
+    width: auto;
+    height: 1.5rem;
+    margin-left: .2rem;
+    float: left;
+    color: #528870;
+    font-weight: bold;
+    font-size: .32rem;
+    line-height: 1.5rem;
+    vertical-align: middle;
+}
+
+.floatConfirm img {
+	width: 1.5rem;
+}
+
+.floatConfirm .btns{
+    position: absolute;
+    float: right;
+    width: auto;
+    bottom: .5rem;
+    right: .5rem;
+}
+
+.time{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: yellow;
+    z-index: 999;
+    text-align: right;
+}
+#show-time{
+    position: absolute;
+	width: .60rem;
+    left: .36rem;
+    top: 0;
+    color: yellow;
+    z-index: 999;
+    text-align: right;
+	white-space: nowrap;
+}
+#max-time{
+    position: absolute;
+    left: 0;
+    top: .25rem;
+    color: yellow;
+    z-index: 999;
+}
