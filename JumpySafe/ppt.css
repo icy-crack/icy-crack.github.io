@@ -1,0 +1,200 @@
+*{
+	margin: 0;
+	padding: 0;
+	
+	font-family: 'Microsoft Yahei';
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: #003040;
+	background-image: url('pptback.png');
+	background-position: bottom;
+	background-repeat: repeat-x;
+	background-size: 50%;
+}
+
+#backIcon{	
+	width: 10%;
+	height: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+
+.left_columns{
+	width: 30%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.right_columns{
+	width: 30%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.column{
+	width: 30%;
+	opacity: 0.5;
+}
+
+div{
+	text-align: center;
+	color: white;
+	background-color: transparent;
+}
+
+.present{
+	height: 70%;
+	width: 70%;
+	/*background-color: #ccc;*/
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+
+.future, .past, .pre, .next{
+	height: 20%;
+	width: 20%;
+	/*background-color: #ccc;*/
+	position: absolute;
+	top: 40%;		
+	opacity: 0;
+}
+
+.past, .pre{
+	left: 5%;
+	right: 75%;
+}
+
+.future, .next{
+	left: 75%;
+	right: 5%;
+}
+
+.btn{
+	height: 0;
+	width: 0;		
+}
+
+
+
+#pre{
+	position: absolute;
+	left: 0;
+	top: 45%;
+	border: 30px solid;
+	border-right-color:  #c94b6a;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+#pre:hover{
+	border-right-color:  #ff8fad;
+}
+
+#next{
+	position: absolute;
+	right: 0;
+	top: 45%;
+	border: 30px solid;
+	border-right-color: transparent;
+	border-left-color: #c94b6a;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+}
+
+#next:hover{
+	border-left-color:  #ff8fad;
+}
+
+#last_page{
+	padding-top: 5%;
+}
+
+h1{	
+	text-align: center;
+	margin-top: 3%;	
+	font-size: 2em;
+}
+
+h2{
+	margin-top: 5%;
+	font-size: 1.5em;
+}
+
+.content{
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+p{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+
+
+.icons{
+	display: none;
+	margin-top: 5%;
+}
+
+.icons img{
+	margin-left: 20px;
+	height: 100px;
+	width: auto;
+}
+
+#team{
+	margin-top: 10%;
+	font-size: 1.5em;
+}
+
+#team_intro{
+	margin-top: 5%;
+	margin-left: 20%;
+	font-size: 1.5em;
+	list-style-position: inside;
+	text-align: left;
+	line-height: 2em;
+}
+
+.center{
+	margin-top: 10%;
+}
+
+@media screen and (max-width: 768px) {
+	html,body{
+		background-image: none;
+	}
+
+	p{
+		font-size: 1em;
+	}
+
+	#team_intro{
+		margin-left: 10%;
+		font-size: 1em;
+	}
+}
+
+/*
+@media screen and (max-width: 768px) and (orientation: portrait;) {
+	.present, .past, .pre, .next, .future{
+		margin-top: 20%;
+	}
+}*/
