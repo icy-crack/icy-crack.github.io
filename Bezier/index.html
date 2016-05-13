@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<section class="modal hidden">
+    <div class="modal-wrapper">
+        <p class="modal-header">Please Name the Setting Before Saving:</p>
+        <input class="modal-body" type="text">
+        <button class="modal-btn cancel" type="button">取消</button>
+        <button class="modal-btn success" type="button">确定</button>
+    </div>
+</section>
+<section class="bezier-transition">
+    <section class="bezier-control">
+        <div class="drag function">
+            <div class="drag-point point-1" data-x="170" data-y="170"></div>
+            <div class="drag-point point-2" data-x="110" data-y="110"></div>
+            <canvas class="bezier-canvas" width="250px" height="300px" data-size="150"></canvas>
+        </div>
+        <div class="drag bar">
+            <div class="drag-point duration"></div>
+            <canvas class="duration-bar" width="300px" height="100px" data-size="200" data-duration="50"></canvas>
+            <canvas class="preview-canvas" width="60px" height="60px" data-size="50"></canvas>
+            <canvas class="compare-canvas" width="60px" height="60px" data-size="50"></canvas>
+            <div class="btn-group">
+                <a class="btn start-preview" type="button">GO</a>
+                <a class="btn save-setting" type="button">SAVE</a>
+            </div>
+        </div>
+        <div class="default-bezier" data-size="80" data-padding="10">
+            <div class="default-item">
+                <span class="delete">&times</span>
+                <canvas class="pre-setting selected" width="100px" height="100px" data-type="ease"></canvas>
+                <span class="bezier-name">ease</span>
+            </div>
+            <div class="default-item">
+                <span class="delete">&times</span>
+                <canvas class="pre-setting" width="100px" height="100px" data-type="linear"></canvas>
+                <span class="bezier-name">linear</span>
+            </div>
+            <div class="default-item">
+                <span class="delete">&times</span>
+                <canvas class="pre-setting" width="100px" height="100px" data-type="easeIn"></canvas>
+                <span class="bezier-name">easeIn</span>
+            </div>
+            <div class="default-item">
+                <span class="delete">&times</span>
+                <canvas class="pre-setting" width="100px" height="100px" data-type="easeOut"></canvas>
+                <span class="bezier-name">easeOut</span>
+            </div>
+            <div class="default-item">
+                <span class="delete">&times</span>
+                <canvas class="pre-setting" width="100px" height="100px" data-type="easeInOut"></canvas>
+                <span class="bezier-name">easeInOut</span>
+            </div>
+        </div>
+    </section>
+    <section class="code-wrapper">
+        <textarea class="code-area" rows="8"></textarea>
+    </section>
+</section>
+<script src="preview.js"></script>
+<script src="Rects.js"></script>
+</body>
+</html>
