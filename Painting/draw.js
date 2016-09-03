@@ -41,7 +41,7 @@ function getPan() {
     });
 }
 function showList(){
-    document.addEventListener('click',function(e){
+    document.addEventListener('tap',function(e){
         var ele = e.target;
         if (ele.className.indexOf('item') > -1){
             for(var i=0; i<more.length; i++){
@@ -63,7 +63,7 @@ function showList(){
     });
 }
 function getSt(){
-    document.addEventListener('click',function(e){
+    document.addEventListener('tap',function(e){
         var tar = e.target;
         //清空画布
         if(tar.id === 'reset'){
