@@ -24,6 +24,7 @@ function getPan() {
         //ctx.fill();
     });
     document.addEventListener("touchmove", function (e) {
+        event.preventDefault();
         if (e.touches.length > 1 || e.scale && e.scale !== 1) return;
         var size = panStatus.size,
             color = panStatus.color,
