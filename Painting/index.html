@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <title>简单的画板</title>
+    <link rel="stylesheet" href="style.css">
+    <!--<script src="less.js"></script>-->
+
+</head>
+<body>
+    <canvas id="myCanvas" width="375" height="500"></canvas>
+    <div id="tools">
+        <div class="items">
+            <div class="item colors" data-item="color">颜色</div>
+            <div class="item size"data-item="size">画笔粗细</div>
+            <div class="item earser-size"data-item="earser">橡皮</div>
+            <div id="reset" class="item reset" data-item="reset">清空画布</div>
+        </div>
+        <ul class="colors more" data-item="color">
+            <li class="st" data-style="#FD5B78">西瓜红
+                <canvas class="red sam" width="5" height="5"></canvas>
+            </li>
+            <li class="st" data-style="#000">black</li>
+            <li class="st" data-style="#495A80">水墨蓝</li>
+            <li class="st" data-style="#C3BED4">樱花紫</li>
+            <li class="st" data-style="#376956">清漾青</li>
+            <li class="st" data-style="#fdb933">郁金色</li>
+        </ul>
+        <ul class="size more" data-item="size">
+            <li class="st" data-style="1" >thin</li>
+            <li class="st" data-style="5">middle</li>
+            <li class="st" data-style="20">thick</li>
+        </ul>
+        <ul class="earser more" data-item="earser">
+            <li class="st" data-style="1">small</li>
+            <li class="st" data-style="5">middle</li>
+            <li class="st" data-style="10">big</li>
+        </ul>
+    </div>
+    <script src = 'draw.js'></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    border: 0;
+}
+#myCanvas{
+    background-color: beige;
+}
+li, ul{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    float: left;
+    margin: 5px;
+}
+
+#tools{
+    position: relative;
+    width: 375px;
+    height:30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+}
+#tools .more{
+
+    display: none;
+}
+.items{
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+}
+#tools .item{
+    display: inline-block;
+    width:22%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+}
